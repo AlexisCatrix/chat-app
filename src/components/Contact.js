@@ -12,7 +12,7 @@ export default function Contact(props) {
           <div className={props.online ? "status-online" : "status-offline"}>
             {props.status}
           </div>
-          <div className="status-text">{props.statustext}</div>
+          <div className="status-text">{props.online ? "online" : "offline"}</div>
         </div>
       </div>
     </div>
@@ -23,5 +23,4 @@ Contact.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   online: PropTypes.bool.isRequired,
-  statustext: PropTypes.string.isRequired,
 };
